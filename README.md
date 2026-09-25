@@ -16,7 +16,7 @@
 
 ## 项目结构与使用
 
-技能由 `npx skills` 管理，统一保存在 `.agents/skills/`；`.claude/skills` 指向同一目录。共享参考资料保存在 `.agents/references/`，`.claude/references` 指向同一目录。
+技能由 `npx skills` 管理，统一保存在 `.agents/skills/`；`.claude/skills` 指向同一目录。每项技能的附属参考资料保存在它自己的 `references/` 目录。
 
 Ponytail 的 Hook 脚本保存在 `.agents/hooks/`，`.codex/hooks` 和 `.claude/hooks` 指向同一份脚本。Codex 读取 `.codex/hooks.json`，Claude Code 读取 `.claude/settings.json`。Ponytail 脚本取自 [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) 的 `e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156`。第三方许可保存在 `licenses/` 或对应技能的 `SKILL.md` 中。
 

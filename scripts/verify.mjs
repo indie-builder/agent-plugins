@@ -32,13 +32,12 @@ assert(!installed.some((item) => item.name === 'prototype' && item.scope === 'pr
 for (const kind of ['skills', 'hooks']) {
   assert.equal(realpathSync(join(root, '.claude', kind)), realpathSync(join(root, '.agents', kind)));
 }
-assert.equal(realpathSync(join(root, '.claude/references')), realpathSync(join(root, '.agents/references')));
 for (const host of ['.agents', '.claude']) {
-  for (const [skill, checklist] of [
-    ['performance-optimization', 'performance-checklist.md'],
-    ['observability-and-instrumentation', 'observability-checklist.md'],
-  ]) {
-    assert(existsSync(join(root, host, 'skills', skill, '../../references', checklist)));
+  for (const skill of ['performance-optimization', 'observability-and-instrumentation']) {
+    const skillDir = join(root, host, 'skills', skill);
+    const references = [...readFileSync(join(skillDir, 'SKILL.md'), 'utf8').matchAll(/`((?:\.\.\/)*references\/[^`\s]+\.md)`/g)];
+    assert(references.length > 0);
+    for (const [, reference] of references) assert(existsSync(join(skillDir, reference)));
   }
 }
 assert.equal(realpathSync(join(root, '.codex/hooks')), realpathSync(join(root, '.agents/hooks')));

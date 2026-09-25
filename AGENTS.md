@@ -7,9 +7,9 @@ This repository maintains plugins for Codex and Claude Code. Read `README.md` be
 - Keep Matt Pocock's `prototype` as `.agents/skills/matt-prototype` and Emil Kowalski's `prototype` as `.agents/skills/emil-prototype`. Their upstream paths are [Matt's `skills/engineering/prototype`](https://github.com/mattpocock/skills/tree/main/skills/engineering/prototype) and [Emil's `skills/prototype`](https://github.com/emilkowalski/skills/tree/d16ebe60d09a5ba2afcb7054ede9d0a10c9f6128/skills/prototype).
 - Sync these two aliases manually. Preserve each local folder name and `SKILL.md` frontmatter name; preserve Matt's `agents/openai.yaml` display name. `npx skills update` does not update them, and neither alias belongs in `skills-lock.json`.
 
-## Shared references
+## Bundled references
 
-- Addy Osmani's `performance-optimization` and `observability-and-instrumentation` skills use `.agents/references/performance-checklist.md` and `.agents/references/observability-checklist.md`. Sync each checklist separately when updating its skill; keep `.claude/references` linked to `.agents/references`.
+- Keep Addy Osmani's performance and observability checklists inside each skill's `references/` directory. After `npx skills update`, copy the corresponding checklist from the upstream root `references/` into that skill and restore its `SKILL.md` link to `references/<checklist>.md`.
 
 ## GitHub workflow
 
