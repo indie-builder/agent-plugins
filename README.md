@@ -13,6 +13,8 @@ npx skills remove <name> -y
 
 `skills-lock.json` 记录项目安装来源；在新环境运行 `npx skills experimental_install` 可按记录恢复技能。该命令只更新技能，Ponytail Hook 脚本需要从上游单独同步。
 
+`prototype` 已由 Matt Pocock 的技能占用。Emil Kowalski 的同名技能以 `emil-prototype` 保存在 `.agents/skills/`；它取自 [emilkowalski/skills](https://github.com/emilkowalski/skills) 的 `d16ebe60d09a5ba2afcb7054ede9d0a10c9f6128`，需要单独同步，`npx skills update` 不会更新这个改名副本。
+
 Codex 从项目根目录启动后，在 `/hooks` 中检查并信任项目 Hook；项目配置也需要被 Codex 信任。本机已安装的全局 `ponytail@ponytail` 插件在本项目内关闭，避免重复注入。Claude Code 从项目根目录启动后会读取项目设置。两端都需要 `node` 在 `PATH` 中。目前没有需要配置的 MCP 服务；有实际服务时再按各自的项目契约添加配置。
 
 从项目根目录运行 `node scripts/verify.mjs`，可检查技能安装及两端的 Ponytail Hook 流程。

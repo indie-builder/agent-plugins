@@ -15,6 +15,8 @@ const ponytail = Object.keys(lock).filter((name) => lock[name].source === 'dietr
 
 assert.equal(ponytail.length, 6);
 assert(Object.keys(lock).every((name) => installed.some((item) => item.name === name && item.scope === 'project')));
+assert.equal(lock.prototype.source, 'mattpocock/skills');
+assert(installed.some((item) => item.name === 'emil-prototype' && item.scope === 'project'));
 for (const kind of ['skills', 'hooks']) {
   assert.equal(realpathSync(join(root, '.claude', kind)), realpathSync(join(root, '.agents', kind)));
 }
@@ -46,7 +48,7 @@ try {
   assert.match(run(claude, 'SessionStart'), /PONYTAIL MODE ACTIVE — level: full/);
   assert.match(run(claude, 'UserPromptSubmit', { prompt: '/ponytail lite' }), /PONYTAIL MODE CHANGED — level: lite/);
   assert.match(JSON.parse(run(claude, 'SubagentStart')).hookSpecificOutput.additionalContext, /PONYTAIL MODE ACTIVE — level: lite/);
-  console.log(`Verified ${Object.keys(lock).length} skills and both Ponytail hook flows`);
+  console.log(`Verified ${Object.keys(lock).length} locked skills, emil-prototype, and both Ponytail hook flows`);
 } finally {
   rmSync(codexState, { recursive: true, force: true });
   rmSync(claudeState, { recursive: true, force: true });
