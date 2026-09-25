@@ -15,6 +15,9 @@ const ponytail = Object.keys(lock).filter((name) => lock[name].source === 'dietr
 
 assert.equal(ponytail.length, 6);
 assert(Object.keys(lock).every((name) => installed.some((item) => item.name === name && item.scope === 'project')));
+for (const name of ['typescript-advanced-types', 'python-performance-optimization', 'api-design-principles']) {
+  assert.equal(lock[name]?.source, 'wshobson/agents');
+}
 assert(!('prototype' in lock));
 for (const name of ['matt-prototype', 'emil-prototype']) {
   assert(installed.some((item) => item.name === name && item.scope === 'project'));

@@ -1,6 +1,6 @@
 # Agent plugins
 
-这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、界面设计与动效；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
+这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、界面设计与动效、TypeScript 高级类型、Python 性能优化及后端 API 设计；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
 
 ## 来源与能力
 
@@ -9,7 +9,7 @@
 | [Matt Pocock · Skills for Real Engineers](https://github.com/mattpocock/skills/blob/main/README.md) | 小而可组合的工程工作流：需求澄清、领域建模、规格与任务拆解、实现、调试和代码审查。 | 已收录技能 |
 | [Dietrich Gebert · Ponytail](https://github.com/DietrichGebert/ponytail/blob/main/README.md) | 优先复用现有代码、标准库和原生能力，减少过度设计；提供代码审查、全库审计及债务清单。 | 已收录技能和 Codex、Claude Code Hook |
 | [Emil Kowalski · Skills for Designers and Engineers](https://github.com/emilkowalski/skills/blob/main/README.md) | 聚焦界面质感与动效：动画设计和审查、移动端交互、UI 组件选择，以及 Swift 开发指导。 | 已收录技能 |
-| [wshobson · Agentic Plugin Marketplace](https://github.com/wshobson/agents/blob/main/README.md) | 覆盖后端、架构、安全等领域的插件市场；其中 API 设计原则与 OpenAPI 规范生成适合后端接口设计。 | 候选来源，尚未安装 |
+| [wshobson · Agentic Plugin Marketplace](https://github.com/wshobson/agents/blob/main/README.md) | 上游覆盖后端、架构、安全等领域；本项目只收录 `typescript-advanced-types`、`python-performance-optimization` 和 `api-design-principles`。 | 已收录 3 项技能；未引入上游 Agent、命令或 Hook |
 
 ## 项目结构与使用
 
