@@ -18,7 +18,7 @@ assert(Object.keys(lock).every((name) => installed.some((item) => item.name === 
 for (const name of ['typescript-advanced-types', 'python-performance-optimization', 'api-design-principles']) {
   assert.equal(lock[name]?.source, 'wshobson/agents');
 }
-for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation', 'deprecation-and-migration', 'code-simplification']) {
+for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation', 'deprecation-and-migration', 'code-simplification', 'code-review-and-quality']) {
   assert.equal(lock[name]?.source, 'addyosmani/agent-skills');
 }
 assert.equal(lock['vercel-react-best-practices']?.source, 'vercel-labs/agent-skills');
@@ -33,7 +33,7 @@ for (const kind of ['skills', 'hooks']) {
   assert.equal(realpathSync(join(root, '.claude', kind)), realpathSync(join(root, '.agents', kind)));
 }
 for (const host of ['.agents', '.claude']) {
-  for (const skill of ['performance-optimization', 'observability-and-instrumentation']) {
+  for (const skill of ['performance-optimization', 'observability-and-instrumentation', 'code-review-and-quality']) {
     const skillDir = join(root, host, 'skills', skill);
     const references = [...readFileSync(join(skillDir, 'SKILL.md'), 'utf8').matchAll(/`((?:\.\.\/)*references\/[^`\s]+\.md)`/g)];
     assert(references.length > 0);
