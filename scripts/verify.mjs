@@ -24,6 +24,14 @@ for (const name of ['performance-optimization', 'api-and-interface-design', 'obs
 assert.equal(lock['vercel-react-best-practices']?.source, 'vercel-labs/agent-skills');
 assert.equal(lock['supabase-postgres-best-practices']?.source, 'supabase/agent-skills');
 assert(existsSync(join(root, '.agents/skills/supabase-postgres-best-practices/references/query-missing-indexes.md')));
+assert.equal(lock.impeccable?.source, 'pbakaus/impeccable');
+const impeccableDir = join(root, '.agents/skills/impeccable');
+const impeccableRefs = [...readFileSync(join(impeccableDir, 'SKILL.md'), 'utf8').matchAll(/\]\((reference\/[^)#]+\.md)(?:#[^)]*)?\)/g)];
+assert(impeccableRefs.length > 0);
+for (const [, reference] of impeccableRefs) {
+  assert(existsSync(join(impeccableDir, reference)));
+}
+assert(existsSync(join(impeccableDir, 'scripts/impeccable')));
 assert(!('prototype' in lock));
 for (const name of ['matt-prototype', 'emil-prototype']) {
   assert(installed.some((item) => item.name === name && item.scope === 'project'));
