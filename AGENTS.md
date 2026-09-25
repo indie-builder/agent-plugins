@@ -2,6 +2,11 @@
 
 This repository maintains plugins for Codex and Claude Code. Read `README.md` before changing skill, hook, or MCP layout.
 
+## Skill name collisions
+
+- Keep Matt Pocock's `prototype` as `.agents/skills/matt-prototype` and Emil Kowalski's `prototype` as `.agents/skills/emil-prototype`. Their upstream paths are [Matt's `skills/engineering/prototype`](https://github.com/mattpocock/skills/tree/main/skills/engineering/prototype) and [Emil's `skills/prototype`](https://github.com/emilkowalski/skills/tree/d16ebe60d09a5ba2afcb7054ede9d0a10c9f6128/skills/prototype).
+- Sync these two aliases manually. Preserve each local folder name and `SKILL.md` frontmatter name; preserve Matt's `agents/openai.yaml` display name. `npx skills update` does not update them, and neither alias belongs in `skills-lock.json`.
+
 ## GitHub workflow
 
 - Use `gh` for GitHub repository, Issue, and PR operations; use `git` for local history.
