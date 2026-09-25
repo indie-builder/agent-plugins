@@ -15,7 +15,7 @@ const ponytail = Object.keys(lock).filter((name) => lock[name].source === 'dietr
 
 assert.equal(ponytail.length, 6);
 assert(Object.keys(lock).every((name) => installed.some((item) => item.name === name && item.scope === 'project')));
-for (const name of ['typescript-advanced-types', 'python-performance-optimization', 'api-design-principles', 'nodejs-backend-patterns']) {
+for (const name of ['typescript-advanced-types', 'python-performance-optimization', 'api-design-principles', 'nodejs-backend-patterns', 'rust-async-patterns', 'tailwind-design-system']) {
   assert.equal(lock[name]?.source, 'wshobson/agents');
 }
 for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation', 'deprecation-and-migration', 'code-simplification', 'code-review-and-quality', 'security-and-hardening']) {
@@ -41,7 +41,7 @@ for (const kind of ['skills', 'hooks']) {
   assert.equal(realpathSync(join(root, '.claude', kind)), realpathSync(join(root, '.agents', kind)));
 }
 for (const host of ['.agents', '.claude']) {
-  for (const skill of ['performance-optimization', 'observability-and-instrumentation', 'code-review-and-quality', 'security-and-hardening', 'nodejs-backend-patterns']) {
+  for (const skill of ['performance-optimization', 'observability-and-instrumentation', 'code-review-and-quality', 'security-and-hardening', 'nodejs-backend-patterns', 'tailwind-design-system']) {
     const skillDir = join(root, host, 'skills', skill);
     const contents = readFileSync(join(skillDir, 'SKILL.md'), 'utf8');
     const references = [
