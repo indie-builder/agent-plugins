@@ -61,11 +61,29 @@
       "skillPath": "skills/engineering/code-review/SKILL.md",
       "computedHash": "caa9a086baaf9e0f7cd71f64edfa83da6821c05e826b083221f3d02e3d6a1905"
     },
+    "code-review-and-quality": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/code-review-and-quality/SKILL.md",
+      "computedHash": "6231479cc74c7ed70a5618b81b3f94034d9806c0319a1a23d15f9b94a368c581"
+    },
+    "code-simplification": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/code-simplification/SKILL.md",
+      "computedHash": "7973e746e8e2ea5004d520da970c15a106824b8d6be1bcff48908aec021f3677"
+    },
     "codebase-design": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/codebase-design/SKILL.md",
       "computedHash": "5a17552cc1482f1a40124bf4e6c9dbd90ac0dbb47e71c07d47369f9e5f2ae3b5"
+    },
+    "deprecation-and-migration": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/deprecation-and-migration/SKILL.md",
+      "computedHash": "0d7b2002e250c02a260f6bc502d7a798ab8e8ca0c020c54d7b0f16053935c72c"
     },
     "diagnosing-bugs": {
       "source": "mattpocock/skills",
@@ -258,6 +276,12 @@
       "sourceType": "github",
       "skillPath": "skills/misc/scaffold-exercises/SKILL.md",
       "computedHash": "354c91f6dbc9b058632f30594aacb4edc6d25012596585abb00402af8d7ec5e9"
+    },
+    "security-and-hardening": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/security-and-hardening/SKILL.md",
+      "computedHash": "1e0cd727cccd3c8c0834ce7722a8a2851e2e849f1352ee972f39311437b021d3"
     },
     "setup-matt-pocock-skills": {
       "source": "mattpocock/skills",
