@@ -1,6 +1,6 @@
 # Agent plugins
 
-这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、安全加固、界面设计与动效、Tailwind CSS v4 设计系统、React/Next.js 组件组合与性能、TypeScript 高级类型、Python 与应用性能优化、Rust 最佳实践与异步编程、Node.js 后端、API 设计、Prisma ORM 与 Postgres 实践、可观测性及系统迁移；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
+这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现、表达与代码审计、安全加固、界面设计与动效、Tailwind CSS v4 设计系统、React/Next.js 组件组合与性能、TypeScript 高级类型、Python 与应用性能优化、Rust 最佳实践与异步编程、Node.js 后端、API 设计、Prisma ORM 与 Postgres 实践、可观测性及系统迁移；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
 
 ## 来源与能力
 
@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | [Matt Pocock · Skills for Real Engineers](https://github.com/mattpocock/skills/blob/main/README.md) | 小而可组合的工程工作流：需求澄清、领域建模、规格与任务拆解、实现、调试和代码审查。 | 已收录技能 |
 | [Dietrich Gebert · Ponytail](https://github.com/DietrichGebert/ponytail/blob/main/README.md) | 优先复用现有代码、标准库和原生能力，减少过度设计；提供代码审查、全库审计及债务清单。 | 已收录技能和 Codex、Claude Code Hook |
+| [Julius Brussee · Caveman](https://github.com/JuliusBrussee/caveman/blob/main/README.md) | 上游通过精简代理回复与压缩工具结果减少 token 消耗，另有本地代理网关、MCP、浏览器扩展和云端成本观测；本项目收录表达、探索、审查、迁移等 20 项技能。 | 已收录技能及随附脚本；未启用代理网关、MCP、扩展或云服务 |
 | [Emil Kowalski · Skills for Designers and Engineers](https://github.com/emilkowalski/skills/blob/main/README.md) | 聚焦界面质感与动效：动画设计和审查、移动端交互、UI 组件选择，以及 Swift 开发指导。 | 已收录技能 |
 | [wshobson · Agentic Plugin Marketplace](https://github.com/wshobson/agents/blob/main/README.md) | 上游覆盖后端、架构、安全和前端等领域；本项目收录 TypeScript 高级类型、Python 性能优化、API 设计原则、Rust 异步模式、Node.js 后端模式，以及面向 Tailwind CSS v4 的设计令牌、组件变体、响应式与无障碍实践。 | 已收录 6 项技能；未引入上游 Agent、命令或 Hook |
 | [Apollo GraphQL · Skills](https://github.com/apollographql/skills) | Rust 编码规范、错误处理、性能、测试和文档实践。 | 已收录 `rust-best-practices` 及其参考章节 |
