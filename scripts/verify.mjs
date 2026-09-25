@@ -15,8 +15,30 @@ const ponytail = Object.keys(lock).filter((name) => lock[name].source === 'dietr
 
 assert.equal(ponytail.length, 6);
 assert(Object.keys(lock).every((name) => installed.some((item) => item.name === name && item.scope === 'project')));
+for (const name of ['typescript-advanced-types', 'python-performance-optimization', 'api-design-principles']) {
+  assert.equal(lock[name]?.source, 'wshobson/agents');
+}
+for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation']) {
+  assert.equal(lock[name]?.source, 'addyosmani/agent-skills');
+}
+assert.equal(lock['vercel-react-best-practices']?.source, 'vercel-labs/agent-skills');
+assert.equal(lock['supabase-postgres-best-practices']?.source, 'supabase/agent-skills');
+assert(existsSync(join(root, '.agents/skills/supabase-postgres-best-practices/references/query-missing-indexes.md')));
+assert(!('prototype' in lock));
+for (const name of ['matt-prototype', 'emil-prototype']) {
+  assert(installed.some((item) => item.name === name && item.scope === 'project'));
+}
+assert(!installed.some((item) => item.name === 'prototype' && item.scope === 'project'));
 for (const kind of ['skills', 'hooks']) {
   assert.equal(realpathSync(join(root, '.claude', kind)), realpathSync(join(root, '.agents', kind)));
+}
+for (const host of ['.agents', '.claude']) {
+  for (const skill of ['performance-optimization', 'observability-and-instrumentation']) {
+    const skillDir = join(root, host, 'skills', skill);
+    const references = [...readFileSync(join(skillDir, 'SKILL.md'), 'utf8').matchAll(/`((?:\.\.\/)*references\/[^`\s]+\.md)`/g)];
+    assert(references.length > 0);
+    for (const [, reference] of references) assert(existsSync(join(skillDir, reference)));
+  }
 }
 assert.equal(realpathSync(join(root, '.codex/hooks')), realpathSync(join(root, '.agents/hooks')));
 
@@ -46,7 +68,7 @@ try {
   assert.match(run(claude, 'SessionStart'), /PONYTAIL MODE ACTIVE — level: full/);
   assert.match(run(claude, 'UserPromptSubmit', { prompt: '/ponytail lite' }), /PONYTAIL MODE CHANGED — level: lite/);
   assert.match(JSON.parse(run(claude, 'SubagentStart')).hookSpecificOutput.additionalContext, /PONYTAIL MODE ACTIVE — level: lite/);
-  console.log(`Verified ${Object.keys(lock).length} skills and both Ponytail hook flows`);
+  console.log(`Verified ${Object.keys(lock).length} locked skills, both prototype aliases, and both Ponytail hook flows`);
 } finally {
   rmSync(codexState, { recursive: true, force: true });
   rmSync(claudeState, { recursive: true, force: true });
