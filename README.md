@@ -13,6 +13,7 @@
 | [Addy Osmani · Agent Skills](https://github.com/addyosmani/agent-skills/blob/main/README.md) | 上游按需求、计划、构建、验证、评审和交付组织工程技能；本项目收录 `performance-optimization`、`api-and-interface-design` 和指导结构化日志、指标、追踪与告警的 `observability-and-instrumentation`。 | 已收录 3 项技能及两份检查清单；未引入上游命令、Agent 或 Hook |
 | [Vercel Labs · Agent Skills](https://github.com/vercel-labs/agent-skills/blob/main/README.md) | 上游涵盖 Vercel 项目优化、React/Next.js 性能、Web 设计、写作与 React Native 等；本项目只收录按影响排序的 React/Next.js 性能规则 `vercel-react-best-practices`。 | 已收录 1 项技能及其规则文件 |
 | [Supabase · Agent Skills](https://github.com/supabase/agent-skills/blob/main/README.md) | 上游提供覆盖 Supabase 产品的综合技能与 Postgres 实践；本项目只收录 `supabase-postgres-best-practices`，涵盖查询、连接、模式设计、锁、RLS 和监控。 | 已收录 1 项技能及其参考文件；未引入上游 MCP 或插件 |
+| [Paul Bakaus · Impeccable](https://github.com/pbakaus/impeccable/blob/main/README.md) | 上游是一套面向 AI 的界面设计语言，提供核心技能、24 个设计命令、浏览器迭代和确定性设计检测；本项目只收录 `impeccable` 技能及其参考手册与脚本。 | 已收录 1 项技能；未启用独立插件、浏览器扩展或检测 Hook |
 
 ## 项目结构与使用
 
