@@ -1,6 +1,19 @@
 # Agent plugins
 
-本项目维护 Codex 和 Claude Code 的技能、Hook 与 MCP 配置。技能由 `npx skills` 管理，统一保存在 `.agents/skills/`；`.claude/skills` 指向同一目录。
+这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、界面设计与动效；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
+
+## 来源与能力
+
+| 上游 README | 上游定位与本项目的能力 | 状态 |
+| --- | --- | --- |
+| [Matt Pocock · Skills for Real Engineers](https://github.com/mattpocock/skills/blob/main/README.md) | 小而可组合的工程工作流：需求澄清、领域建模、规格与任务拆解、实现、调试和代码审查。 | 已收录技能 |
+| [Dietrich Gebert · Ponytail](https://github.com/DietrichGebert/ponytail/blob/main/README.md) | 优先复用现有代码、标准库和原生能力，减少过度设计；提供代码审查、全库审计及债务清单。 | 已收录技能和 Codex、Claude Code Hook |
+| [Emil Kowalski · Skills for Designers and Engineers](https://github.com/emilkowalski/skills/blob/main/README.md) | 聚焦界面质感与动效：动画设计和审查、移动端交互、UI 组件选择，以及 Swift 开发指导。 | 已收录技能 |
+| [wshobson · Agentic Plugin Marketplace](https://github.com/wshobson/agents/blob/main/README.md) | 覆盖后端、架构、安全等领域的插件市场；其中 API 设计原则与 OpenAPI 规范生成适合后端接口设计。 | 候选来源，尚未安装 |
+
+## 项目结构与使用
+
+技能由 `npx skills` 管理，统一保存在 `.agents/skills/`；`.claude/skills` 指向同一目录。
 
 Ponytail 的 Hook 脚本保存在 `.agents/hooks/`，`.codex/hooks` 和 `.claude/hooks` 指向同一份脚本。Codex 读取 `.codex/hooks.json`，Claude Code 读取 `.claude/settings.json`。Ponytail 脚本取自 [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) 的 `e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156`。第三方许可保存在 `licenses/`。
 
