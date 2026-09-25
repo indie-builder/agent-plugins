@@ -1,6 +1,6 @@
 # Agent plugins
 
-这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、安全加固、界面设计与动效、React/Next.js 性能、TypeScript 高级类型、Python 与应用性能优化、Rust 最佳实践与异步编程、Node.js 后端、API 设计、Postgres 实践、可观测性及系统迁移；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
+这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、安全加固、界面设计与动效、React/Next.js 组件组合与性能、TypeScript 高级类型、Python 与应用性能优化、Rust 最佳实践与异步编程、Node.js 后端、API 设计、Postgres 实践、可观测性及系统迁移；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
 
 ## 来源与能力
 
@@ -12,7 +12,7 @@
 | [wshobson · Agentic Plugin Marketplace](https://github.com/wshobson/agents/blob/main/README.md) | 上游覆盖后端、架构、安全等领域；本项目收录 TypeScript 高级类型、Python 性能优化、API 设计原则、Rust 异步模式及指导 Express/Fastify 服务的 `nodejs-backend-patterns`。 | 已收录 5 项技能；未引入上游 Agent、命令或 Hook |
 | [Apollo GraphQL · Skills](https://github.com/apollographql/skills) | Rust 编码规范、错误处理、性能、测试和文档实践。 | 已收录 `rust-best-practices` 及其参考章节 |
 | [Addy Osmani · Agent Skills](https://github.com/addyosmani/agent-skills/blob/main/README.md) | 上游按需求、计划、构建、验证、评审和交付组织工程技能；本项目收录性能优化、API 与接口设计、可观测性、系统退役与迁移、代码简化、多维代码审查，以及覆盖输入、认证、依赖和隐私的 `security-and-hardening`。 | 已收录 7 项技能及各技能所需的检查清单；未引入上游命令、Agent 或 Hook |
-| [Vercel Labs · Agent Skills](https://github.com/vercel-labs/agent-skills/blob/main/README.md) | 上游涵盖 Vercel 项目优化、React/Next.js 性能、Web 设计、写作与 React Native 等；本项目只收录按影响排序的 React/Next.js 性能规则 `vercel-react-best-practices`。 | 已收录 1 项技能及其规则文件 |
+| [Vercel Labs · Agent Skills](https://github.com/vercel-labs/agent-skills/blob/main/README.md) | 上游涵盖 Vercel 项目优化、React/Next.js 性能、Web 设计、写作与 React Native 等；本项目收录组件组合模式 `vercel-composition-patterns` 与性能规则 `vercel-react-best-practices`。 | 已收录 2 项技能及其规则文件 |
 | [Supabase · Agent Skills](https://github.com/supabase/agent-skills/blob/main/README.md) | 上游提供覆盖 Supabase 产品的综合技能与 Postgres 实践；本项目只收录 `supabase-postgres-best-practices`，涵盖查询、连接、模式设计、锁、RLS 和监控。 | 已收录 1 项技能及其参考文件；未引入上游 MCP 或插件 |
 | [Paul Bakaus · Impeccable](https://github.com/pbakaus/impeccable/blob/main/README.md) | 上游是一套面向 AI 的界面设计语言，提供核心技能、24 个设计命令、浏览器迭代和确定性设计检测；本项目只收录 `impeccable` 技能及其参考手册与脚本。 | 已收录 1 项技能；未启用独立插件、浏览器扩展或检测 Hook |
 
