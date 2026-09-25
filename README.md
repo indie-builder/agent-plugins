@@ -1,6 +1,6 @@
 # Agent plugins
 
-这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、界面设计与动效、TypeScript 高级类型、Python 性能优化及后端 API 设计；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
+这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、界面设计与动效、TypeScript 高级类型、Python 与应用性能优化及后端 API 设计；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
 
 ## 来源与能力
 
@@ -10,10 +10,11 @@
 | [Dietrich Gebert · Ponytail](https://github.com/DietrichGebert/ponytail/blob/main/README.md) | 优先复用现有代码、标准库和原生能力，减少过度设计；提供代码审查、全库审计及债务清单。 | 已收录技能和 Codex、Claude Code Hook |
 | [Emil Kowalski · Skills for Designers and Engineers](https://github.com/emilkowalski/skills/blob/main/README.md) | 聚焦界面质感与动效：动画设计和审查、移动端交互、UI 组件选择，以及 Swift 开发指导。 | 已收录技能 |
 | [wshobson · Agentic Plugin Marketplace](https://github.com/wshobson/agents/blob/main/README.md) | 上游覆盖后端、架构、安全等领域；本项目只收录 `typescript-advanced-types`、`python-performance-optimization` 和 `api-design-principles`。 | 已收录 3 项技能；未引入上游 Agent、命令或 Hook |
+| [Addy Osmani · Agent Skills](https://github.com/addyosmani/agent-skills/blob/main/README.md) | 上游按需求、计划、构建、验证、评审和交付组织工程技能；本项目只收录先测量再优化前端、后端及数据库的 `performance-optimization`。 | 已收录 1 项技能及其性能检查清单；未引入上游命令、Agent 或 Hook |
 
 ## 项目结构与使用
 
-技能由 `npx skills` 管理，统一保存在 `.agents/skills/`；`.claude/skills` 指向同一目录。
+技能由 `npx skills` 管理，统一保存在 `.agents/skills/`；`.claude/skills` 指向同一目录。共享参考资料保存在 `.agents/references/`，`.claude/references` 指向同一目录。
 
 Ponytail 的 Hook 脚本保存在 `.agents/hooks/`，`.codex/hooks` 和 `.claude/hooks` 指向同一份脚本。Codex 读取 `.codex/hooks.json`，Claude Code 读取 `.claude/settings.json`。Ponytail 脚本取自 [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) 的 `e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156`。第三方许可保存在 `licenses/`。
 
