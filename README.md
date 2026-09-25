@@ -1,6 +1,6 @@
 # Agent plugins
 
-这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、安全加固、界面设计与动效、React/Next.js 性能、TypeScript 高级类型、Python 与应用性能优化、Rust 最佳实践与异步编程、Node.js 后端、API 设计、Postgres 实践、可观测性及系统迁移；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
+这是面向 **Codex 和 Claude Code** 的项目级插件目录：按需收录第三方技能与 Hook，并维护两端可读取的配置。当前覆盖软件工程工作流、精简实现与代码审计、安全加固、界面设计与动效、shadcn/ui 组件实践、React/Next.js 性能、TypeScript 高级类型、Python 与应用性能优化、Rust 最佳实践与异步编程、Node.js 后端、API 设计、Postgres 实践、可观测性及系统迁移；尚未配置 MCP 服务，也未整仓镜像任何上游项目。
 
 ## 来源与能力
 
@@ -9,6 +9,7 @@
 | [Matt Pocock · Skills for Real Engineers](https://github.com/mattpocock/skills/blob/main/README.md) | 小而可组合的工程工作流：需求澄清、领域建模、规格与任务拆解、实现、调试和代码审查。 | 已收录技能 |
 | [Dietrich Gebert · Ponytail](https://github.com/DietrichGebert/ponytail/blob/main/README.md) | 优先复用现有代码、标准库和原生能力，减少过度设计；提供代码审查、全库审计及债务清单。 | 已收录技能和 Codex、Claude Code Hook |
 | [Emil Kowalski · Skills for Designers and Engineers](https://github.com/emilkowalski/skills/blob/main/README.md) | 聚焦界面质感与动效：动画设计和审查、移动端交互、UI 组件选择，以及 Swift 开发指导。 | 已收录技能 |
+| [shadcn · shadcn/ui](https://github.com/shadcn-ui/ui/blob/main/README.md) | 上游提供可组合、可访问且可自行修改的组件源码；本项目收录 `shadcn` 技能，指导组件检索、CLI 使用、样式、组合、表单、聊天界面和 registry 工作流。 | 已收录 1 项技能及规则文档；未安装组件或配置 MCP 服务 |
 | [wshobson · Agentic Plugin Marketplace](https://github.com/wshobson/agents/blob/main/README.md) | 上游覆盖后端、架构、安全等领域；本项目收录 TypeScript 高级类型、Python 性能优化、API 设计原则、Rust 异步模式及指导 Express/Fastify 服务的 `nodejs-backend-patterns`。 | 已收录 5 项技能；未引入上游 Agent、命令或 Hook |
 | [Apollo GraphQL · Skills](https://github.com/apollographql/skills) | Rust 编码规范、错误处理、性能、测试和文档实践。 | 已收录 `rust-best-practices` 及其参考章节 |
 | [Addy Osmani · Agent Skills](https://github.com/addyosmani/agent-skills/blob/main/README.md) | 上游按需求、计划、构建、验证、评审和交付组织工程技能；本项目收录性能优化、API 与接口设计、可观测性、系统退役与迁移、代码简化、多维代码审查，以及覆盖输入、认证、依赖和隐私的 `security-and-hardening`。 | 已收录 7 项技能及各技能所需的检查清单；未引入上游命令、Agent 或 Hook |
