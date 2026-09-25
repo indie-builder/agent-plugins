@@ -61,6 +61,12 @@
       "skillPath": "skills/engineering/code-review/SKILL.md",
       "computedHash": "caa9a086baaf9e0f7cd71f64edfa83da6821c05e826b083221f3d02e3d6a1905"
     },
+    "code-simplification": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/code-simplification/SKILL.md",
+      "computedHash": "7973e746e8e2ea5004d520da970c15a106824b8d6be1bcff48908aec021f3677"
+    },
     "codebase-design": {
       "source": "mattpocock/skills",
       "sourceType": "github",

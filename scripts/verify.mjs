@@ -18,7 +18,7 @@ assert(Object.keys(lock).every((name) => installed.some((item) => item.name === 
 for (const name of ['typescript-advanced-types', 'python-performance-optimization', 'api-design-principles']) {
   assert.equal(lock[name]?.source, 'wshobson/agents');
 }
-for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation', 'deprecation-and-migration']) {
+for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation', 'deprecation-and-migration', 'code-simplification']) {
   assert.equal(lock[name]?.source, 'addyosmani/agent-skills');
 }
 assert.equal(lock['vercel-react-best-practices']?.source, 'vercel-labs/agent-skills');
