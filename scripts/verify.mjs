@@ -19,6 +19,7 @@ for (const name of ['typescript-advanced-types', 'python-performance-optimizatio
   assert.equal(lock[name]?.source, 'wshobson/agents');
 }
 assert.equal(lock['performance-optimization']?.source, 'addyosmani/agent-skills');
+assert.equal(lock['api-and-interface-design']?.source, 'addyosmani/agent-skills');
 assert(!('prototype' in lock));
 for (const name of ['matt-prototype', 'emil-prototype']) {
   assert(installed.some((item) => item.name === name && item.scope === 'project'));

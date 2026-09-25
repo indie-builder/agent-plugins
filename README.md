@@ -10,7 +10,7 @@
 | [Dietrich Gebert · Ponytail](https://github.com/DietrichGebert/ponytail/blob/main/README.md) | 优先复用现有代码、标准库和原生能力，减少过度设计；提供代码审查、全库审计及债务清单。 | 已收录技能和 Codex、Claude Code Hook |
 | [Emil Kowalski · Skills for Designers and Engineers](https://github.com/emilkowalski/skills/blob/main/README.md) | 聚焦界面质感与动效：动画设计和审查、移动端交互、UI 组件选择，以及 Swift 开发指导。 | 已收录技能 |
 | [wshobson · Agentic Plugin Marketplace](https://github.com/wshobson/agents/blob/main/README.md) | 上游覆盖后端、架构、安全等领域；本项目只收录 `typescript-advanced-types`、`python-performance-optimization` 和 `api-design-principles`。 | 已收录 3 项技能；未引入上游 Agent、命令或 Hook |
-| [Addy Osmani · Agent Skills](https://github.com/addyosmani/agent-skills/blob/main/README.md) | 上游按需求、计划、构建、验证、评审和交付组织工程技能；本项目只收录先测量再优化前端、后端及数据库的 `performance-optimization`。 | 已收录 1 项技能及其性能检查清单；未引入上游命令、Agent 或 Hook |
+| [Addy Osmani · Agent Skills](https://github.com/addyosmani/agent-skills/blob/main/README.md) | 上游按需求、计划、构建、验证、评审和交付组织工程技能；本项目收录先测量再优化前端、后端及数据库的 `performance-optimization`，以及设计稳定契约、错误语义和兼容演进的 `api-and-interface-design`。 | 已收录 2 项技能及性能检查清单；未引入上游命令、Agent 或 Hook |
 
 ## 项目结构与使用
 
