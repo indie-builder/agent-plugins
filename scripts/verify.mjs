@@ -21,6 +21,7 @@ for (const name of ['typescript-advanced-types', 'python-performance-optimizatio
 for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation']) {
   assert.equal(lock[name]?.source, 'addyosmani/agent-skills');
 }
+assert.equal(lock['vercel-react-best-practices']?.source, 'vercel-labs/agent-skills');
 assert(!('prototype' in lock));
 for (const name of ['matt-prototype', 'emil-prototype']) {
   assert(installed.some((item) => item.name === name && item.scope === 'project'));
