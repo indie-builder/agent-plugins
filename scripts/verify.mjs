@@ -22,6 +22,8 @@ for (const name of ['performance-optimization', 'api-and-interface-design', 'obs
   assert.equal(lock[name]?.source, 'addyosmani/agent-skills');
 }
 assert.equal(lock['vercel-react-best-practices']?.source, 'vercel-labs/agent-skills');
+assert.equal(lock['supabase-postgres-best-practices']?.source, 'supabase/agent-skills');
+assert(existsSync(join(root, '.agents/skills/supabase-postgres-best-practices/references/query-missing-indexes.md')));
 assert(!('prototype' in lock));
 for (const name of ['matt-prototype', 'emil-prototype']) {
   assert(installed.some((item) => item.name === name && item.scope === 'project'));
