@@ -9,7 +9,7 @@ This repository maintains plugins for Codex and Claude Code. Read `README.md` be
 
 ## Shared references
 
-- Addy Osmani's `performance-optimization` skill uses `.agents/references/performance-checklist.md`. Sync that checklist separately when updating the skill; keep `.claude/references` linked to `.agents/references`.
+- Addy Osmani's `performance-optimization` and `observability-and-instrumentation` skills use `.agents/references/performance-checklist.md` and `.agents/references/observability-checklist.md`. Sync each checklist separately when updating its skill; keep `.claude/references` linked to `.agents/references`.
 
 ## GitHub workflow
 

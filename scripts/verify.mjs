@@ -18,8 +18,9 @@ assert(Object.keys(lock).every((name) => installed.some((item) => item.name === 
 for (const name of ['typescript-advanced-types', 'python-performance-optimization', 'api-design-principles']) {
   assert.equal(lock[name]?.source, 'wshobson/agents');
 }
-assert.equal(lock['performance-optimization']?.source, 'addyosmani/agent-skills');
-assert.equal(lock['api-and-interface-design']?.source, 'addyosmani/agent-skills');
+for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation']) {
+  assert.equal(lock[name]?.source, 'addyosmani/agent-skills');
+}
 assert(!('prototype' in lock));
 for (const name of ['matt-prototype', 'emil-prototype']) {
   assert(installed.some((item) => item.name === name && item.scope === 'project'));
@@ -30,7 +31,12 @@ for (const kind of ['skills', 'hooks']) {
 }
 assert.equal(realpathSync(join(root, '.claude/references')), realpathSync(join(root, '.agents/references')));
 for (const host of ['.agents', '.claude']) {
-  assert(existsSync(join(root, host, 'skills/performance-optimization/../../references/performance-checklist.md')));
+  for (const [skill, checklist] of [
+    ['performance-optimization', 'performance-checklist.md'],
+    ['observability-and-instrumentation', 'observability-checklist.md'],
+  ]) {
+    assert(existsSync(join(root, host, 'skills', skill, '../../references', checklist)));
+  }
 }
 assert.equal(realpathSync(join(root, '.codex/hooks')), realpathSync(join(root, '.agents/hooks')));
 
