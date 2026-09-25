@@ -22,6 +22,8 @@ for (const name of ['performance-optimization', 'api-and-interface-design', 'obs
   assert.equal(lock[name]?.source, 'addyosmani/agent-skills');
 }
 assert.equal(lock['vercel-react-best-practices']?.source, 'vercel-labs/agent-skills');
+assert.equal(lock.shadcn?.source, 'shadcn-ui/ui');
+assert(existsSync(join(root, '.agents/skills/shadcn/rules/composition.md')));
 assert.equal(lock['supabase-postgres-best-practices']?.source, 'supabase/agent-skills');
 assert(existsSync(join(root, '.agents/skills/supabase-postgres-best-practices/references/query-missing-indexes.md')));
 assert.equal(lock.impeccable?.source, 'pbakaus/impeccable');
