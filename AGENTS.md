@@ -9,7 +9,7 @@ This repository maintains plugins for Codex and Claude Code. Read `README.md` be
 
 ## Bundled references
 
-- Keep Addy Osmani's performance and observability checklists inside each skill's `references/` directory. After `npx skills update`, copy the corresponding checklist from the upstream root `references/` into that skill and restore its `SKILL.md` link to `references/<checklist>.md`.
+- Keep Addy Osmani's upstream checklists inside each affected skill's `references/` directory (currently performance, observability, code review, and security). After `npx skills update`, copy the checklists from the upstream root `references/` into those skills and restore their `SKILL.md` links to `references/<checklist>.md`.
 
 ## GitHub workflow
 

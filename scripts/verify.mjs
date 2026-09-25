@@ -18,12 +18,20 @@ assert(Object.keys(lock).every((name) => installed.some((item) => item.name === 
 for (const name of ['typescript-advanced-types', 'python-performance-optimization', 'api-design-principles', 'nodejs-backend-patterns']) {
   assert.equal(lock[name]?.source, 'wshobson/agents');
 }
-for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation']) {
+for (const name of ['performance-optimization', 'api-and-interface-design', 'observability-and-instrumentation', 'deprecation-and-migration', 'code-simplification', 'code-review-and-quality', 'security-and-hardening']) {
   assert.equal(lock[name]?.source, 'addyosmani/agent-skills');
 }
 assert.equal(lock['vercel-react-best-practices']?.source, 'vercel-labs/agent-skills');
 assert.equal(lock['supabase-postgres-best-practices']?.source, 'supabase/agent-skills');
 assert(existsSync(join(root, '.agents/skills/supabase-postgres-best-practices/references/query-missing-indexes.md')));
+assert.equal(lock.impeccable?.source, 'pbakaus/impeccable');
+const impeccableDir = join(root, '.agents/skills/impeccable');
+const impeccableRefs = [...readFileSync(join(impeccableDir, 'SKILL.md'), 'utf8').matchAll(/\]\((reference\/[^)#]+\.md)(?:#[^)]*)?\)/g)];
+assert(impeccableRefs.length > 0);
+for (const [, reference] of impeccableRefs) {
+  assert(existsSync(join(impeccableDir, reference)));
+}
+assert(existsSync(join(impeccableDir, 'scripts/impeccable')));
 assert(!('prototype' in lock));
 for (const name of ['matt-prototype', 'emil-prototype']) {
   assert(installed.some((item) => item.name === name && item.scope === 'project'));
@@ -33,9 +41,13 @@ for (const kind of ['skills', 'hooks']) {
   assert.equal(realpathSync(join(root, '.claude', kind)), realpathSync(join(root, '.agents', kind)));
 }
 for (const host of ['.agents', '.claude']) {
-  for (const skill of ['performance-optimization', 'observability-and-instrumentation', 'nodejs-backend-patterns']) {
+  for (const skill of ['performance-optimization', 'observability-and-instrumentation', 'code-review-and-quality', 'security-and-hardening', 'nodejs-backend-patterns']) {
     const skillDir = join(root, host, 'skills', skill);
-    const references = [...readFileSync(join(skillDir, 'SKILL.md'), 'utf8').matchAll(/`((?:\.\.\/)*references\/[^`\s]+\.md)`/g)];
+    const contents = readFileSync(join(skillDir, 'SKILL.md'), 'utf8');
+    const references = [
+      ...contents.matchAll(/`((?:\.\.\/)*references\/[^`\s]+\.md)`/g),
+      ...contents.matchAll(/\]\(((?:\.\.\/)*references\/[^)#\s]+\.md)(?:#[^)]*)?\)/g),
+    ];
     assert(references.length > 0);
     for (const [, reference] of references) assert(existsSync(join(skillDir, reference)));
   }
