@@ -19,6 +19,7 @@
 | [Prisma · Skills](https://github.com/prisma/skills/blob/main/README.md) | Prisma ORM、Postgres、Compute 等技能及参考文件 |
 | [Paul Bakaus · Impeccable](https://github.com/pbakaus/impeccable/blob/main/README.md) | `impeccable` 技能、参考手册及脚本 |
 | [HumanLayer · Skills](https://github.com/humanlayer/skills) | `show-me` 可视化解释技能 |
+| [Matteo Collina · Skills](https://github.com/mcollina/skills) | `fastify-best-practices` 技能及规则文档 |
 
 第三方许可与署名保存在 `licenses/` 或对应技能的 `SKILL.md` 中。
 
