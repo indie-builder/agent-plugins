@@ -21,6 +21,7 @@
 | [HumanLayer · Skills](https://github.com/humanlayer/skills) | `show-me` 可视化解释技能 |
 | [Matteo Collina · Skills](https://github.com/mcollina/skills) | `fastify-best-practices` 技能及规则文档 |
 | [GitHub · Awesome Copilot](https://github.com/github/awesome-copilot) | `multi-stage-dockerfile` 多阶段容器构建技能 |
+| [Lieflat Charts](https://github.com/larashero3-dotcom/lieflat-charts) | `lieflat-charts` HTML 图表与报告技能 |
 
 第三方许可与署名保存在 `licenses/` 或对应技能的 `SKILL.md` 中。
 
