@@ -271,6 +271,12 @@
       "skillPath": "skills/lean-build/SKILL.md",
       "computedHash": "6074721f1653e6e9d6381595b094284807b8d5d001d7d3977ec534679b16a63c"
     },
+    "lieflat-charts": {
+      "source": "larashero3-dotcom/lieflat-charts",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "2c0c80a8e2effb31e59a562eb3a07d421dfd949e0c55902416c13f47d76f15fe"
+    },
     "loop-me": {
       "source": "mattpocock/skills",
       "sourceType": "github",
