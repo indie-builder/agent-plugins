@@ -23,6 +23,7 @@
 | [GitHub · Awesome Copilot](https://github.com/github/awesome-copilot) | `multi-stage-dockerfile` 多阶段容器构建技能 |
 | [Lieflat Charts](https://github.com/larashero3-dotcom/lieflat-charts) | `lieflat-charts` HTML 图表与报告技能 |
 | [EverMind AI · Raven](https://github.com/EverMind-AI/Raven) | `git-story-film` Git 历史动画影片技能 |
+| [alesha-pro · Tools](https://github.com/alesha-pro/tools) | `hand-drawn-canvas-animation` 手绘 Canvas 动画技能 |
 
 第三方许可与署名保存在 `licenses/` 或对应技能的 `SKILL.md` 中。
 

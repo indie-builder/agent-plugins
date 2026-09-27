@@ -230,6 +230,13 @@
       "skillPath": "skills/productivity/grilling/SKILL.md",
       "computedHash": "4dd886b0196bf43729d954ae326016f2bd9f5f79d892500b407c33a753362f14"
     },
+    "hand-drawn-canvas-animation": {
+      "source": "alesha-pro/tools",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/hand-drawn-canvas-animation/SKILL.md",
+      "computedHash": "294a7ba68bffcd056528fe05f58804185e18128b8d68d50d76aa9952b3227a00"
+    },
     "handoff": {
       "source": "mattpocock/skills",
       "sourceType": "github",
