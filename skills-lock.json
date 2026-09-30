@@ -163,6 +163,12 @@
       "skillPath": "skills/engineering/codebase-design/SKILL.md",
       "computedHash": "5a17552cc1482f1a40124bf4e6c9dbd90ac0dbb47e71c07d47369f9e5f2ae3b5"
     },
+    "create-verification-skill": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "skillPath": "pstack/skills/create-verification-skill/SKILL.md",
+      "computedHash": "a2e50d21892772174225073b3e4864f853883ae2bc13b33eca64c3b67fe06be5"
+    },
     "deprecation-and-migration": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
