@@ -38,3 +38,5 @@ npx skills experimental_install
 更新技能可运行 `npx skills update --project -y`。Ponytail Hook 脚本保存在 `.agents/hooks/`，`.codex/hooks` 和 `.claude/hooks` 指向同一目录；其来源是 [DietrichGebert/ponytail 的 `e3ba2aa` 提交](https://github.com/DietrichGebert/ponytail/tree/e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156)，需要单独同步。两端配置分别在 `.codex/hooks.json` 和 `.claude/settings.json`。
 
 从项目根目录启动，并确保 `node` 在 `PATH` 中。Codex 还需信任项目配置和 `/hooks` 中的项目 Hook。修改技能或 Hook 后运行 `node scripts/verify.mjs` 验证。
+
+本地技能 `harness-code-check` 用于检查恒等分支、吞错、硬编码密钥、测试覆盖率和僵尸文件、模块、API。使用 `$harness-code-check` 调用，默认检查并报告，不自动修复；它不属于第三方来源锁定项。
