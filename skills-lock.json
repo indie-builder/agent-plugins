@@ -49,6 +49,12 @@
       "skillPath": "skills/ask-sonner/SKILL.md",
       "computedHash": "8bd257b845985f4b35b603b510a126604176521094af79c4b7347ffeb8a8f7ab"
     },
+    "business-motion-film": {
+      "source": "echris6/motion-video-kit",
+      "sourceType": "github",
+      "skillPath": "business-motion-film/SKILL.md",
+      "computedHash": "298c9864619868367d55423b42afc146f772e39bf277d16ed8c46a27307fae0a"
+    },
     "cavecrew": {
       "source": "juliusbrussee/caveman",
       "sourceType": "github",

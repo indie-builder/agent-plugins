@@ -25,6 +25,7 @@
 | [EverMind AI · Raven](https://github.com/EverMind-AI/Raven) | `git-story-film` Git 历史动画影片技能 |
 | [alesha-pro · Tools](https://github.com/alesha-pro/tools) | `hand-drawn-canvas-animation` 手绘 Canvas 动画技能 |
 | [Cursor · Plugins](https://github.com/cursor/plugins) | `create-verification-skill`、`maintain-verification-skill` 项目验证技能生成与维护 |
+| [echris6 · Motion Video Kit](https://github.com/echris6/motion-video-kit) | `business-motion-film` 商业短片制作、动效与质量检查技能 |
 
 第三方许可与署名保存在 `licenses/` 或对应技能的 `SKILL.md` 中。
 
