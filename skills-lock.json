@@ -49,6 +49,12 @@
       "skillPath": "skills/ask-sonner/SKILL.md",
       "computedHash": "8bd257b845985f4b35b603b510a126604176521094af79c4b7347ffeb8a8f7ab"
     },
+    "business-motion-film": {
+      "source": "echris6/motion-video-kit",
+      "sourceType": "github",
+      "skillPath": "business-motion-film/SKILL.md",
+      "computedHash": "298c9864619868367d55423b42afc146f772e39bf277d16ed8c46a27307fae0a"
+    },
     "cavecrew": {
       "source": "juliusbrussee/caveman",
       "sourceType": "github",
@@ -162,6 +168,12 @@
       "sourceType": "github",
       "skillPath": "skills/engineering/codebase-design/SKILL.md",
       "computedHash": "5a17552cc1482f1a40124bf4e6c9dbd90ac0dbb47e71c07d47369f9e5f2ae3b5"
+    },
+    "create-verification-skill": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "skillPath": "pstack/skills/create-verification-skill/SKILL.md",
+      "computedHash": "a2e50d21892772174225073b3e4864f853883ae2bc13b33eca64c3b67fe06be5"
     },
     "deprecation-and-migration": {
       "source": "addyosmani/agent-skills",
@@ -296,6 +308,12 @@
       "sourceType": "github",
       "skillPath": "skills/in-progress/loop-me/SKILL.md",
       "computedHash": "72e01a16929dbf6583afc469a49d64b28b1be4a6034c900decd94cd5a69ba6e6"
+    },
+    "maintain-verification-skill": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "skillPath": "pstack/skills/maintain-verification-skill/SKILL.md",
+      "computedHash": "283083c9547641392a58c38edeb147e75aa99912e7fba55edaa7b1a02021ffec"
     },
     "migrate-to-shoehorn": {
       "source": "mattpocock/skills",
