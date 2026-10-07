@@ -31,6 +31,7 @@
 | [backnotprop · bro](https://github.com/backnotprop/bro/blob/main/README.md) | `bro`、`clean-room`、`facts`、`ladder`、`readback`、`recap`、`status` 七项沟通与状态展示技能；该仓库暂无 LICENSE 文件 |
 | [Jakub Krehel · Skills](https://github.com/jakubkrehel/skills/blob/main/README.md) | `better-interface`、`better-ui`、`better-typography`、`better-colors`、`better-accessibility`、`better-layout`、`better-writing`、`interface-review`、`explain-interface`、`break`、`build-design`、`state-machine`、`variant` 十三项界面设计技能（MIT 许可） |
 | [April Zhu · Iso Glow](https://isoglow.dev/) | `iso-glow` 等距发光线稿交互图技能（MIT 许可；网站分发，无 GitHub 上游） |
+| [alchaincyf · Huashu Art Motion](https://github.com/alchaincyf/huashu-art-motion) | `huashu-art-motion` 艺术风格绘制、动画复刻与视频动画技能 |
 
 第三方许可与署名保存在 `licenses/`、对应技能目录的 `LICENSE` 文件或其 `SKILL.md` 中。
 
