@@ -28,6 +28,7 @@
 | [echris6 · Motion Video Kit](https://github.com/echris6/motion-video-kit) | `business-motion-film` 商业短片制作、动效与质量检查技能 |
 | [Warp · Common Skills](https://github.com/warpdotdev/common-skills/blob/main/README.md) | `skill-doctor` 技能评分与改进建议 |
 | [Kit Langton · Skills](https://github.com/kitlangton/skills) | `effect` Effect v4 生产 TypeScript 技能及参考文档 |
+| [backnotprop · bro](https://github.com/backnotprop/bro/blob/main/README.md) | `bro`、`clean-room`、`facts`、`ladder`、`readback`、`recap`、`status` 七项沟通与状态展示技能；该仓库暂无 LICENSE 文件 |
 
 第三方许可与署名保存在 `licenses/` 或对应技能的 `SKILL.md` 中。
 
