@@ -29,6 +29,7 @@
 | [Warp · Common Skills](https://github.com/warpdotdev/common-skills/blob/main/README.md) | `skill-doctor` 技能评分与改进建议 |
 | [Kit Langton · Skills](https://github.com/kitlangton/skills) | `effect` Effect v4 生产 TypeScript 技能及参考文档 |
 | [backnotprop · bro](https://github.com/backnotprop/bro/blob/main/README.md) | `bro`、`clean-room`、`facts`、`ladder`、`readback`、`recap`、`status` 七项沟通与状态展示技能；该仓库暂无 LICENSE 文件 |
+| [Jakub Krehel · Skills](https://github.com/jakubkrehel/skills/blob/main/README.md) | `better-interface`、`better-ui`、`better-typography`、`better-colors`、`better-accessibility`、`better-layout`、`better-writing`、`interface-review`、`explain-interface`、`break`、`build-design`、`state-machine`、`variant` 十三项界面设计技能（MIT 许可） |
 
 第三方许可与署名保存在 `licenses/` 或对应技能的 `SKILL.md` 中。
 
