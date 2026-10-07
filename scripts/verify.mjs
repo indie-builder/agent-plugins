@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFileSync, spawnSync } from 'node:child_process';
-import { existsSync, mkdtempSync, readFileSync, realpathSync, rmSync } from 'node:fs';
+import { closeSync, existsSync, mkdtempSync, openSync, readFileSync, realpathSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -10,7 +10,20 @@ const read = (path) => JSON.parse(readFileSync(join(root, path), 'utf8'));
 const codex = read('.codex/hooks.json').hooks;
 const claude = read('.claude/settings.json').hooks;
 const lock = read('skills-lock.json').skills;
-const installed = JSON.parse(execFileSync('npx', ['--yes', 'skills', 'list', '--json'], { cwd: root, encoding: 'utf8' }));
+const listingDir = mkdtempSync(join(tmpdir(), 'skills-list-'));
+let installed;
+try {
+  const listingPath = join(listingDir, 'skills.json');
+  const listingFd = openSync(listingPath, 'w');
+  try {
+    execFileSync('npx', ['--yes', 'skills', 'list', '--json'], { cwd: root, stdio: ['ignore', listingFd, 'pipe'] });
+  } finally {
+    closeSync(listingFd);
+  }
+  installed = JSON.parse(readFileSync(listingPath, 'utf8'));
+} finally {
+  rmSync(listingDir, { recursive: true, force: true });
+}
 const ponytail = Object.keys(lock).filter((name) => lock[name].source === 'dietrichgebert/ponytail');
 
 assert.equal(ponytail.length, 6);
