@@ -18,7 +18,7 @@
 | [Supabase · Agent Skills](https://github.com/supabase/agent-skills/blob/main/README.md) | `supabase-postgres-best-practices` 及参考文件 |
 | [Prisma · Skills](https://github.com/prisma/skills/blob/main/README.md) | Prisma ORM、Postgres、Compute 等技能及参考文件 |
 | [Paul Bakaus · Impeccable](https://github.com/pbakaus/impeccable/blob/main/README.md) | `impeccable` 技能、参考手册及脚本 |
-| [HumanLayer · Skills](https://github.com/humanlayer/skills) | `show-me` 可视化解释技能 |
+| [HumanLayer · Skills](https://github.com/humanlayer/skills) | `show-me` 可视化解释技能、`visual-pr` 拉取请求描述技能 |
 | [Matteo Collina · Skills](https://github.com/mcollina/skills) | `fastify-best-practices` 技能及规则文档 |
 | [GitHub · Awesome Copilot](https://github.com/github/awesome-copilot) | `multi-stage-dockerfile` 多阶段容器构建技能 |
 | [Lieflat Charts](https://github.com/larashero3-dotcom/lieflat-charts) | `lieflat-charts` HTML 图表与报告技能 |
