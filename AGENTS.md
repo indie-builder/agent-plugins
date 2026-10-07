@@ -11,6 +11,12 @@ This repository maintains plugins for Codex and Claude Code. Read `README.md` be
 
 - Keep Addy Osmani's upstream checklists inside each affected skill's `references/` directory (currently performance, observability, code review, and security). After `npx skills update`, copy the checklists from the upstream root `references/` into those skills and restore their `SKILL.md` links to `references/<checklist>.md`.
 
+## Website-distributed skills
+
+- Skills downloaded from a website with no GitHub upstream (currently `iso-glow` from https://isoglow.dev/) are vendored under `.agents/skills/`. Preserve their upstream files byte-for-byte with no quality review or rewrite, and keep the original license file inside the skill directory.
+- They get no `skills-lock.json` entry, so `npx skills update` and `npx skills experimental_install` neither install nor update them. Update them manually by re-downloading from the source site and replacing the skill directory.
+- Check imports and updates with integration checks only: expected files present, `npx skills list --json` discovers the skill at project scope, and the copy matches the downloaded archive byte-for-byte.
+
 ## GitHub workflow
 
 - Use `gh` for GitHub repository, Issue, and PR operations; use `git` for local history.

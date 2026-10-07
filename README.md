@@ -30,19 +30,27 @@
 | [Kit Langton · Skills](https://github.com/kitlangton/skills) | `effect` Effect v4 生产 TypeScript 技能及参考文档 |
 | [backnotprop · bro](https://github.com/backnotprop/bro/blob/main/README.md) | `bro`、`clean-room`、`facts`、`ladder`、`readback`、`recap`、`status` 七项沟通与状态展示技能；该仓库暂无 LICENSE 文件 |
 | [Jakub Krehel · Skills](https://github.com/jakubkrehel/skills/blob/main/README.md) | `better-interface`、`better-ui`、`better-typography`、`better-colors`、`better-accessibility`、`better-layout`、`better-writing`、`interface-review`、`explain-interface`、`break`、`build-design`、`state-machine`、`variant` 十三项界面设计技能（MIT 许可） |
+| [April Zhu · Iso Glow](https://isoglow.dev/) | `iso-glow` 等距发光线稿交互图技能（MIT 许可；网站分发，无 GitHub 上游） |
 
-第三方许可与署名保存在 `licenses/` 或对应技能的 `SKILL.md` 中。
+第三方许可与署名保存在 `licenses/`、对应技能目录的 `LICENSE` 文件或其 `SKILL.md` 中。
 
 ## 使用与维护
 
-技能保存在 `.agents/skills/`，由 `npx skills` 管理；`.claude/skills` 指向同一目录。`skills-lock.json` 记录安装来源，可在新环境恢复技能：
+由 `npx skills` 管理的技能保存在 `.agents/skills/`；`.claude/skills` 指向同一目录。`skills-lock.json` 记录它们的安装来源，可在新环境恢复技能：
 
 ```sh
 npx skills experimental_install
 ```
 
-更新技能可运行 `npx skills update --project -y`。Ponytail Hook 脚本保存在 `.agents/hooks/`，`.codex/hooks` 和 `.claude/hooks` 指向同一目录；其来源是 [DietrichGebert/ponytail 的 `e3ba2aa` 提交](https://github.com/DietrichGebert/ponytail/tree/e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156)，需要单独同步。两端配置分别在 `.codex/hooks.json` 和 `.claude/settings.json`。
+更新锁定技能可运行 `npx skills update --project -y`。Ponytail Hook 脚本保存在 `.agents/hooks/`，`.codex/hooks` 和 `.claude/hooks` 指向同一目录；其来源是 [DietrichGebert/ponytail 的 `e3ba2aa` 提交](https://github.com/DietrichGebert/ponytail/tree/e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156)，需要单独同步。两端配置分别在 `.codex/hooks.json` 和 `.claude/settings.json`。
 
 从项目根目录启动，并确保 `node` 在 `PATH` 中。Codex 还需信任项目配置和 `/hooks` 中的项目 Hook。修改技能或 Hook 后运行 `node scripts/verify.mjs` 验证。
 
-本地技能 `harness-code-check` 用于检查恒等分支、吞错、硬编码密钥、测试覆盖率和僵尸文件、模块、API。使用 `$harness-code-check` 调用，默认检查并报告，不自动修复；它不属于第三方来源锁定项。
+## 锁外技能的收录与维护
+
+并非所有技能都有 GitHub 上游。除两个 `prototype` 别名（见 `AGENTS.md`）外，以下两类技能不进入 `skills-lock.json`，也不由 `npx skills update` 或 `npx skills experimental_install` 跟踪；技能内容随本仓库提交，克隆即得，变更由 git 历史记录：
+
+- **网站分发技能**：`iso-glow` 来自 [isoglow.dev](https://isoglow.dev/)（April Zhu，MIT 许可），无 GitHub 上游仓库。手动更新时从源站点获取最新版本（当前实测下载地址 <https://iso-glow.vercel.app/iso-glow.zip>），解压后用其中的 `iso-glow/` 目录整体覆盖 `.agents/skills/iso-glow/`；上游文件逐字节原样保留，不做质量审查或改写，MIT 许可证文件随技能目录保存。
+- **本仓库自研技能**：如 `harness-code-check`（检查恒等分支、吞错、硬编码密钥、测试覆盖率和僵尸文件、模块、API；使用 `$harness-code-check` 调用，默认只检查并报告，不自动修复），直接在本仓库编写维护。
+
+收录或更新网站分发技能时只做集成检查：文件齐全、`npx skills list --json` 能以 project 作用域发现、副本与下载存档逐字节一致。
